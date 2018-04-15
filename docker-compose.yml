@@ -5,6 +5,7 @@ services:
     container_name: nginx.symfony
     image: nginx:1.13.10
     volumes:
+<<<<<<< HEAD
       - .:/code # Mount your code, so nginx/phpcould see it
       - .docker/nginx/site.conf:/etc/nginx/conf.d/site.conf # Use custom virtual hosts
     ports:
@@ -28,10 +29,27 @@ services:
       - APP_ENV=prod # bin/console use APP_ENV value from environment
     volumes:
       - .:/code # Mount your code, so nginx/phpcould see it
+=======
+      - ./:/code
+      - ./.docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+    ports:
+      - 127.0.0.1:80:80
+
+  php.symfony:
+    container_name: php.symfony
+    image: php.symfony
+    environment:
+      - APP_ENV=prod
+      - APP_SECRET=460e7ab843a2e9a80801934185be6022b6e1cdfb9a510c08debee23a9e73deb6
+      - DATABASE_URL=mysql://root:OjitmawfOb7GriGros9@mysql.symfony:3306/symfony
+    volumes:
+      - ./:/code
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 
   mysql.symfony:
     container_name: mysql.symfony
     image: mysql:5.7.21
+<<<<<<< HEAD
     environment: # During first run root user with is generated with this password
       - MYSQL_ROOT_PASSWORD=p9iijKcfgENjBWDYgSH7
     volumes:
@@ -44,3 +62,19 @@ services:
     container_name: frontend.symfony
     volumes:
       - .:/code # Mount your code, so javaScript tools could see it
+=======
+    environment:
+      - MYSQL_ROOT_PASSWORD=OjitmawfOb7GriGros9
+    volumes:
+      - ./.docker/mysql-data/:/var/lib/mysql
+
+  frontend.symfony:
+    container_name: frontend.symfony
+    image: frontend.symfony
+    volumes:
+      - ./:/code
+    ports:
+      - "127.0.0.1:9500:9500"
+    extra_hosts:
+     - "symfony.local:0.0.0.0"
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210

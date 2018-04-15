@@ -38,8 +38,8 @@
       <file leaf-file-name="WishaGiftController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/WishaGiftController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="330">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#34#60#0#PHP" expanded="true" />
               </folding>
@@ -240,6 +240,11 @@
             <path>
               <item name="wish-a-gift" type="b2602c69:ProjectViewProjectNode" />
               <item name="wish-a-gift" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="wish-a-gift" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish-a-gift" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -326,23 +331,22 @@
       <option name="presentableId" value="Default" />
       <updated>1523703710909</updated>
       <workItem from="1523703718768" duration="812000" />
-      <workItem from="1523705290935" duration="25632000" />
+      <workItem from="1523705290935" duration="25913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26444000" />
+    <option name="totallyTimeSpent" value="26725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3298193" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3298193" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23426062" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -514,8 +518,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/WishaGiftController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="330">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#34#60#0#PHP" expanded="true" />
           </folding>

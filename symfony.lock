@@ -89,9 +89,12 @@
             "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
         }
     },
+<<<<<<< HEAD
     "squizlabs/php_codesniffer": {
         "version": "3.2.3"
     },
+=======
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
     "symfony/asset": {
         "version": "v4.0.6"
     },
@@ -140,9 +143,12 @@
             "ref": "cc1afd81841db36fbef982fe56b48ade6716fac4"
         }
     },
+<<<<<<< HEAD
     "symfony/form": {
         "version": "v4.0.8"
     },
+=======
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
     "symfony/framework-bundle": {
         "version": "3.3",
         "recipe": {
@@ -158,12 +164,15 @@
     "symfony/http-kernel": {
         "version": "v4.0.6"
     },
+<<<<<<< HEAD
     "symfony/inflector": {
         "version": "v4.0.8"
     },
     "symfony/intl": {
         "version": "v4.0.8"
     },
+=======
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
     "symfony/lts": {
         "version": "4-dev"
     },
@@ -176,6 +185,7 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+<<<<<<< HEAD
     "symfony/options-resolver": {
         "version": "v4.0.8"
     },
@@ -191,6 +201,14 @@
     "symfony/property-access": {
         "version": "v4.0.8"
     },
+=======
+    "symfony/orm-pack": {
+        "version": "v1.0.5"
+    },
+    "symfony/polyfill-mbstring": {
+        "version": "v1.7.0"
+    },
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
     "symfony/routing": {
         "version": "4.0",
         "recipe": {

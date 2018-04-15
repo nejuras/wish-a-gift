@@ -35,6 +35,11 @@ yarn-error.log
 /node_modules
 .env
 npm-debug.log
+<<<<<<< HEAD
 /project.tar.gz
 /.deploy/*.retry
 ###< Old symfony and common infrastructure ###
+=======
+.idea/
+###< Old symfony and common infrastructure ###
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210

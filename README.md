@@ -1,6 +1,10 @@
 ![](https://avatars0.githubusercontent.com/u/4995607?v=3&s=100)
 
+<<<<<<< HEAD
 NFQ Akademija10
+=======
+NFQ Akademija
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 ============
 
 # Intro
@@ -29,7 +33,11 @@ Naudosime naujausią dokerio versiją, kuri įgalina virtualizaciją be Virtualb
  Tam reikės, kad jūsų kompiuterio procesorius palaikytų [Hypervisor](https://en.wikipedia.org/wiki/Hypervisor).
  Nėra dėl ko nerimauti, dabartiniai kompiuteriai kone visi turi šį palaikymą.
 
+<<<<<<< HEAD
 Parsisiunčiate ir įsidiegiate įrankį iš [čia](https://docs.docker.com/install/linux/docker-ce/ubuntu/). Iškart įdiegus reikia pasidaryti, kad `docker` būtų galima naudoti be root teisių, kaip tai padaryti rasite [čia](https://docs.docker.com/compose/install/).
+=======
+Parsisiunčiate ir įsidiegiate įrankį iš [čia](https://docs.docker.com/engine/installation/linux/ubuntu/). Iškart įdiegus reikia pasidaryti, kad `docker` būtų galima naudoti be root teisių, kaip tai padaryti rasite [čia](https://docs.docker.com/engine/installation/linux/linux-postinstall/).
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 
 Parsisiunčiate ir įsidiegiate `docker-compose` iš [čia](https://github.com/docker/compose/releases).
 
@@ -37,6 +45,7 @@ Taip pat reikia įsidiegti [Kitematic](https://github.com/docker/kitematic/relea
  Šis įrankis padės geriau organizuoti dokerio konteinerius. 
 
 #### Versijų reikalavimai
+<<<<<<< HEAD
 * docker: `18.x-ce`
 * docker-compose: `1.20.1`
 
@@ -71,14 +80,45 @@ docker-compose run --rm frontend.symfony
   npm install --no-save
   ```
   * Jei pakeitimai neatsinaujina (arba klaidos dėl `build/css` ar `build/js`):
+=======
+* docker: `1.13.1`
+* docker-compose: `1.7.1`
+
+
+### Projekto paleidimas (projekto kūrimui lokaliai)
+
+* Pasiruoškite infrastruktūrą:
+  * Pasikeičiame slaptažodžius: `docker-compose.yml` faile `APP_SECRET` ir `DATABASE_URL` reikšmės
+  * Pasileidžiame:
+  ```
+  sudo su -c 'echo "127.0.0.1 symfony.local" >> /etc/hosts'
+  docker build .docker/php -t php.symfony 
+  docker build .docker/frontend -t frontend.symfony
+  docker-compose up -d
+  ```
+
+* JavaScript/CSS įrankiams (atsidaryti atskirame lange)
+```
+docker-compose run frontend.symfony
+```
+  * Pirmą kartą (įsirašome JavaScript bilbiotekas)
+  ```
+  npm install
+  ```
+  * Jei pakeitimai neatsinaujina:
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
   ```
   yarn run encore dev --watch
   ```
 
+<<<<<<< HEAD
 #### Pasruošiame backend aplinką
 
 
 * PHP įrankiams (**atsidaryti atskirame lange**)
+=======
+* PHP įrankiams (atsidaryti atskirame lange)
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 ```
 docker exec -it php.symfony bash
 ```
@@ -88,6 +128,7 @@ docker exec -it php.symfony bash
   ```
   * Jei pakeitimai neatsinaujina:
   ```
+<<<<<<< HEAD
   bin/console cache:clear
   bin/console assets:install
   ```
@@ -100,10 +141,20 @@ Jei nematote užrašo "NFQ Akademija", reiškia, kažkur susimovėte,
  tokiu atveju viską ištrinat ir kartojate iš naujo tol kol gausis.
  Kai prarasite visiškai viltį, kreipkitės į [Google](http://lmgtfy.com/?q=docker+is+not+working), o po to į mentorių.
 
+=======
+  ./bin/console --env=dev cache:clear
+  ./bin/console --env=dev cache:warmup
+  ./bin/console --env=dev assets:install
+  ```
+
+* Pasižiūrime rezultatą.
+Atsidarome naršyklėje [symfony.local](http://symfony.local)
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 
 
 ### Projekto paleidimas (palyginimui kaip atrodytų produkcinėje)
 
+<<<<<<< HEAD
 * Pasiruoškite infrastruktūrą (jei prieš tai leidote šią komandą, jos kartoti nereikia):
   ```
   docker-compose up -d
@@ -129,11 +180,40 @@ docker-compose run --rm frontend.symfony
 * PHP įrankiams (**atsidaryti atskirame lange, skiriasi nuo dev aplinkos**)
 ```
 docker exec -it prod.php.symfony bash
+=======
+* Pasiruoškite infrastruktūrą:
+  * Pasikeičiame slaptažodžius: `docker-compose.yml` faile `APP_SECRET` ir `DATABASE_URL` reikšmės
+  * Pasileidžiame:
+  ```
+  sudo su -c 'echo "127.0.0.1 symfony.prod" >> /etc/hosts'
+  docker build .docker/php -t php.symfony 
+  docker build .docker/frontend -t frontend.symfony
+  docker-compose up -d
+  ```
+
+* JavaScript/CSS įrankiams (atsidaryti atskirame lange)
+```
+docker-compose run frontend.symfony
+```
+  * Pirmą kartą (įsirašome JavaScript bilbiotekas)
+  ```
+  npm install
+  ```
+  * Jei pakeitimai neatsinaujina:
+  ```
+  yarn run encore encore production
+  ```
+
+* PHP įrankiams (atsidaryti atskirame lange)
+```
+docker exec -it php.symfony bash
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 ```
   * Pirmą kartą paleidus (įsirašome PHP biliotekas):
   ```
   composer install
   ```
+<<<<<<< HEAD
   * Jei pakeitimai neatsinaujina (**skiriasi nuo dev aplinkos**):
   ```
   bin/console cache:clear
@@ -145,6 +225,19 @@ docker exec -it prod.php.symfony bash
 Atsidarome naršyklėje [127.0.0.1:8888](http://127.0.0.1:8888)
 
 P.S. šalia galima atsidaryti ir palyginti su `127.0.0.1:8000`
+=======
+  * Jei pakeitimai neatsinaujina:
+  ```
+  ./bin/console --env=prod cache:clear
+  ./bin/console --env=prod cache:warmup
+  ./bin/console --env=prod assets:install
+  ```
+
+* Pasižiūrime rezultatą.
+Atsidarome naršyklėje [symfony.prod](http://symfony.prod)
+
+P.S. šalia galima atsidaryti ir palyginti su `symfony.local`
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 
 
 ### Kaip teisingai išjungti docker konteinerius?
@@ -159,6 +252,7 @@ Galima išjungti ir po vieną:
 docker-compose kill <container name>
 ```
 
+<<<<<<< HEAD
 ### Kaip prisijungti prie MySql duomenų bazės?
 
 ```
@@ -174,12 +268,22 @@ Slaptažodžiui naudoti `p9iijKcfgENjBWDYgSH7`
 * Įsitikinkite, kad reikalingos bibliotekos įrašytos į operacinę sistemą. Žr. pavyzdį [php/Dockerfile](.docker/php/Dockerfile)
 * Įsitikinkite, kad `APP_ENV` yra `prod` (tiek naudojant `bin/console`, tiek ateinantis per `nginx` į `index.php`) 
 
+=======
+
+### Kaip pamatyti kas atsitiko?
+
+Atsidarote naršyklę ir einate į `http://127.0.0.1:8000`,
+ jei nematote užrašo "NFQ Akademija", reiškia, kažkur susimovėte,
+ tokiu atveju viską ištrinat ir kartojate iš naujo tol kol gausis.
+ Kai prarasite visiškai viltį, kreipkitės į [Google](http://lmgtfy.com/?q=docker+is+not+working), o po to į mentorių.  
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 
 ### Troubleshooting'as
 
 Jeigu kažkas nutiko ne taip, na, atsirado raudona eilutė, ar tiesiog nutrūko ir nieko nerodo, neatsidaro naršyklėje svetainė, tai pirmas žingsnis būtų paleisti komandą:
 
 ```
+<<<<<<< HEAD
 docker-compose logs 
 ```
 
@@ -195,6 +299,15 @@ docker rm -f $(docker ps -aq)
 docker rmi -f kickstartmaster_frontend.symfony
 docker rmi -f kickstartmaster_prod.php.symfony
 docker rmi -f kickstartmaster_php.symfony
+=======
+docker-compose logs
+```
+
+Nepamirškite, kad galima nurodyti norimą procesą. Taip pat ir 'grepinti'.
+
+```
+docker-compose logs mariadb
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
 ```
 
 ### Feedbackas

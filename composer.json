@@ -4,6 +4,7 @@
     "require": {
         "php": "^7.1.3",
         "ext-iconv": "*",
+<<<<<<< HEAD
         "doctrine/dbal": "^2.7",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "^4.0",
@@ -11,6 +12,12 @@
         "symfony/dotenv": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/form": "^4.0",
+=======
+        "sensio/framework-extra-bundle": "^5.1",
+        "symfony/asset": "^4.0",
+        "symfony/console": "^4.0",
+        "symfony/flex": "^1.0",
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
         "symfony/framework-bundle": "^4.0",
         "symfony/lts": "^4@dev",
         "symfony/maker-bundle": "^1.3",
@@ -20,7 +27,11 @@
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
+<<<<<<< HEAD
         "squizlabs/php_codesniffer": "*"
+=======
+        "symfony/dotenv": "^4.0"
+>>>>>>> 26ba564ce16e728a7cc20cf79ffc26bbfab69210
     },
     "config": {
         "preferred-install": {
