@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+        {% for team in giftlist %}
+
+            {{ team.firstname }} - {{ team.lastname }} - {{ team.email }} <br>
+            {{ team.gift }} <br>
+
+        {% endfor %}
+
+{% endblock %}
